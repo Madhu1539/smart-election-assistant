@@ -1,0 +1,87 @@
+{
+  "voters": [
+    {
+      "voterIdNumber": "MH1234567",
+      "name": "Rahul Sharma",
+      "city": "Mumbai",
+      "boothNumber": "MH-001",
+      "boothAddress": "D.N. Nagar Primary School, Andheri West, Mumbai - 400053",
+      "constituency": "Mumbai North West",
+      "ward": "Andheri West",
+      "isActive": true
+    },
+    {
+      "voterIdNumber": "DL9876543",
+      "name": "Priya Singh",
+      "city": "Delhi",
+      "boothNumber": "DL-001",
+      "boothAddress": "Rajinder Nagar Govt. School, New Delhi - 110060",
+      "constituency": "New Delhi",
+      "ward": "Rajinder Nagar",
+      "isActive": true
+    },
+    {
+      "voterIdNumber": "KA5678901",
+      "name": "Ananya Reddy",
+      "city": "Bangalore",
+      "boothNumber": "KA-001",
+      "boothAddress": "Koramangala Govt. High School, Bangalore - 560034",
+      "constituency": "Bangalore South",
+      "ward": "Koramangala",
+      "isActive": true
+    },
+    {
+      "voterIdNumber": "TN2345678",
+      "name": "Karthik Murugan",
+      "city": "Chennai",
+      "boothNumber": "TN-001",
+      "boothAddress": "T. Nagar Municipal School, Chennai - 600017",
+      "constituency": "Chennai Central",
+      "ward": "T. Nagar",
+      "isActive": true
+    },
+    {
+      "voterIdNumber": "TS3456789",
+      "name": "Sita Devi",
+      "city": "Hyderabad",
+      "boothNumber": "TS-001",
+      "boothAddress": "Banjara Hills Govt. School, Hyderabad - 500034",
+      "constituency": "Hyderabad",
+      "ward": "Banjara Hills",
+      "isActive": true
+    }
+  ],
+  "users": [
+    {
+      "name": "Amit Kumar",
+      "email": "amit@example.com",
+      "age": 28,
+      "city": "Delhi",
+      "isRegistered": true
+    },
+    {
+      "name": "Sunita Rao",
+      "email": "sunita@example.com",
+      "age": 35,
+      "city": "Bangalore",
+      "isRegistered": true
+    },
+    {
+      "name": "Rohan Mehta",
+      "email": "rohan@example.com",
+      "age": 17,
+      "city": "Mumbai",
+      "isRegistered": false
+    }
+  ],
+  "electionFacts": [
+    "India has the world's largest democratic electorate with over 968 million registered voters.",
+    "The Election Commission of India (ECI) was established on January 25, 1950.",
+    "India uses Electronic Voting Machines (EVMs) since 1982 to ensure tamper-proof voting.",
+    "The NOTA (None of the Above) option was introduced in 2013.",
+    "India's general elections span multiple phases to manage logistics across the vast country.",
+    "Voters get an indelible ink mark on their finger to prevent double voting.",
+    "VVPAT machines were introduced to provide a paper trail for votes cast.",
+    "The minimum age to vote in India is 18 years since 1989 (lowered from 21)."
+  ]
+}

@@ -1,0 +1,329 @@
+/* Eligibility.css */
+.eligibility-page {
+  background: var(--bg-primary);
+  min-height: 100vh;
+  padding-bottom: var(--space-3xl);
+}
+
+.eligibility-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-3xl);
+}
+
+/* Checker Card */
+.checker-card {
+  background: white;
+  border-radius: var(--border-radius-xl);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  align-self: start;
+  position: sticky;
+  top: 90px;
+}
+
+.checker-icon {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: var(--space-md);
+  animation: float 3s ease-in-out infinite;
+}
+
+.checker-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.checker-subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: var(--space-xl);
+}
+
+.age-input {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  text-align: center;
+  padding: var(--space-lg);
+  letter-spacing: 4px;
+}
+
+.age-input::placeholder {
+  font-size: 1rem;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+/* Quick Ages */
+.quick-ages {
+  margin-top: var(--space-xl);
+  text-align: center;
+}
+
+.quick-ages-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--space-sm);
+}
+
+.quick-ages-btns {
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.age-btn {
+  padding: 6px 16px;
+  border-radius: var(--border-radius-full);
+  border: 2px solid var(--border-color);
+  background: var(--bg-secondary);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  color: var(--text-secondary);
+}
+
+.age-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: rgba(79, 70, 229, 0.05);
+}
+
+.age-btn-active {
+  background: var(--gradient-btn);
+  color: white;
+  border-color: transparent;
+}
+
+/* Result Box */
+.result-box {
+  border-radius: var(--border-radius-xl);
+  padding: var(--space-xl);
+  border: 2px solid;
+}
+
+.result-eligible {
+  background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+  border-color: #6ee7b7;
+}
+
+.result-not-eligible {
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  border-color: #93c5fd;
+}
+
+.result-header {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: flex-start;
+  margin-bottom: var(--space-xl);
+}
+
+.result-emoji {
+  font-size: 3rem;
+  flex-shrink: 0;
+  animation: float 3s ease-in-out infinite;
+}
+
+.result-message {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: var(--space-sm);
+  color: var(--text-primary);
+}
+
+.result-detail {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.result-next-steps {
+  background: rgba(255,255,255,0.7);
+  border-radius: var(--border-radius-md);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.result-next-steps h4 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.result-next-steps ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.result-next-steps li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.next-step-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.icon-success {
+  background: #10b981;
+  color: white;
+}
+
+.icon-info {
+  background: #3b82f6;
+  color: white;
+}
+
+/* Quick Facts */
+.quick-facts {
+  background: white;
+  border-radius: var(--border-radius-xl);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+}
+
+.facts-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: var(--space-xl);
+}
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.fact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-color);
+}
+
+.fact-icon { font-size: 1.75rem; }
+
+.fact-title {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.fact-value {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--primary);
+}
+
+.nri-box {
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  border: 1px solid #fde68a;
+  border-radius: var(--border-radius-md);
+  padding: var(--space-lg);
+}
+
+.nri-box h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+  color: #92400e;
+}
+
+.nri-box p {
+  font-size: 0.875rem;
+  color: #78350f;
+  line-height: 1.6;
+}
+
+/* What Now section */
+.what-now-section {
+  padding-top: var(--space-xl);
+}
+
+.what-now-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.what-now-card {
+  background: white;
+  border-radius: var(--border-radius-xl);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  transition: all var(--transition-normal);
+}
+
+.what-now-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+}
+
+.what-now-icon {
+  font-size: 2.5rem;
+  animation: float 4s ease-in-out infinite;
+}
+
+.what-now-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.what-now-card p {
+  font-size: 0.9rem;
+  flex: 1;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .eligibility-layout { grid-template-columns: 1fr; }
+  .checker-card { position: static; }
+  .what-now-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .facts-grid { grid-template-columns: 1fr; }
+}

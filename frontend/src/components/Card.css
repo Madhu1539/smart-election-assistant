@@ -1,0 +1,61 @@
+/* Card.css */
+.card-component {
+  background: var(--bg-card);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-xl);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Variants */
+.card-default {
+  box-shadow: var(--shadow-sm);
+}
+
+.card-gradient {
+  background: var(--gradient-card);
+  box-shadow: var(--shadow-md);
+}
+
+.card-bordered {
+  border: 2px solid var(--primary-light);
+  box-shadow: none;
+}
+
+.card-elevated {
+  box-shadow: var(--shadow-lg);
+}
+
+/* Hover effects */
+.card-hoverable:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-clickable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.card-clickable:active {
+  transform: translateY(-2px);
+}
+
+/* Decorative top bar */
+.card-component::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-main);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.card-hoverable:hover::before {
+  opacity: 1;
+}
