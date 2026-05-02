@@ -8,6 +8,12 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
+    if (!process.env.MONGO_URI) {
+      console.warn(`⚠️  No MONGO_URI provided. Skipping database connection attempt.`);
+      console.warn(`   App will run in no-database mode — all features still work!`);
+      return;
+    }
+    
     // Set server selection timeout to 5 seconds to fail fast
     const conn = await mongoose.connect(process.env.MONGO_URI, {
       serverSelectionTimeoutMS: 5000,

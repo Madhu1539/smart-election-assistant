@@ -4,6 +4,7 @@
  */
 require('dotenv').config();
 const express = require('express');
+const path = require('path');
 const cors = require('cors');
 const connectDB = require('./config/db');
 
@@ -25,6 +26,19 @@ app.use(express.urlencoded({ extended: true }));
 // ── Routes ───────────────────────────────────────────────────────────────────
 app.use('/api/chat', require('./routes/chatbotRoutes'));
 app.use('/api/voter', require('./routes/voterRoutes'));
+
+// ── Serve Frontend in Production ─────────────────────────────────────────────
+if (process.env.NODE_ENV === 'production') {
+  const frontendPath = path.join(__dirname, '../frontend/dist');
+  app.use(express.static(frontendPath));
+
+  app.get('*', (req, res) => {
+    // If the request URL starts with /api, we should not send the index.html
+    // This allows the 404 handler to catch invalid API routes.
+    if (req.url.startsWith('/api/')) return res.status(404).json({ error: 'API Route not found' });
+    res.sendFile(path.join(frontendPath, 'index.html'));
+  });
+}
 
 // ── Health Check ─────────────────────────────────────────────────────────────
 app.get('/api/health', (req, res) => {
