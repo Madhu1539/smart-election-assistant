@@ -122,6 +122,37 @@ For actual booth details: [electoralsearch.eci.gov.in](https://electoralsearch.e
 
 ---
 
+## 🧪 Testing
+
+### Testing Approach
+The application has undergone thorough manual testing along with basic validation checks. Our primary goal was to ensure all core functionalities, especially the AI assistant and voter tools, work smoothly under various conditions and user interactions.
+
+### Types of Testing Performed
+- **Functional Testing**: Verified that all core features (eligibility check, booth finder, timeline) work as intended.
+- **Input Validation Testing**: Ensured forms and chat inputs handle incorrect or empty data safely.
+- **UI/UX Testing**: Confirmed responsive design across mobile, tablet, and desktop views.
+- **Performance Testing**: Checked page load times and chatbot response delays.
+- **Error Handling Testing**: Simulated network failures and incorrect API responses to ensure graceful fallbacks.
+
+### Test Cases
+
+| Test Case | Input/Action | Expected Output | Status |
+|-----------|--------------|-----------------|--------|
+| **Valid user query** | "How to register to vote?" | Chatbot provides step-by-step registration guide. | ✅ Pass |
+| **Empty input** | Submit empty chat message | No message sent, input field remains focused. | ✅ Pass |
+| **Invalid/random input** | "asdfghjkl" | Chatbot asks for clarification or provides a default fallback message. | ✅ Pass |
+| **Election-related question** | "Where is my polling booth?" | Chatbot directs the user to the Booth Finder tool. | ✅ Pass |
+| **Non-related question** | "What is the weather today?" | Chatbot states it can only answer election-related queries. | ✅ Pass |
+| **Eligibility check - Underage** | Enter age "16" | Shows "Not Eligible" with the required age criteria. | ✅ Pass |
+| **Eligibility check - Valid** | Enter age "20" | Shows "Eligible" with next steps to register. | ✅ Pass |
+| **Navigation Button click** | Click "Find Booth" in navigation | Redirects smoothly to the Booth Finder page. | ✅ Pass |
+| **API failure / no internet** | Disconnect internet & send query | Shows a friendly error message like "Unable to connect". | ✅ Pass |
+
+### Conclusion
+Based on the testing results, the Election Process Assistant is stable, responsive, and handles edge cases properly. The application successfully manages unexpected user inputs and network issues, providing a seamless and educational experience for voters.
+
+---
+
 ## 🔗 Official Resources
 
 | Resource | URL |
