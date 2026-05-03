@@ -4,8 +4,8 @@
  */
 import axios from 'axios';
 
-// Base URL — reads from .env or defaults to localhost
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+// Base URL — reads from .env or defaults to localhost/production relative path
+const BASE_URL = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? '/api' : 'http://localhost:5000/api');
 
 // Axios instance with defaults
 const api = axios.create({
